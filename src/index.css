@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "EB Garamond", "Garamond", Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+}
+
+:root {
+  /* Colors */
+  --color-primary: #051C2C;
+  --color-accent: #2251FF;
+  --color-bg: #F5F5F2;
+  --color-muted: #888888;
+  --color-body-text: #051C2C;
+  --color-surface: #FFFFFF;
+  --color-input-bg: #FFFDE7;
+  --color-border: #E0E0E0;
+  
+  /* Semantic */
+  --color-positive: #00C853;
+  --color-negative: #D32F2F;
+  
+  /* Layout & Nav */
+  --nav-bg: #FFFFFF;
+  --nav-border: #E0E0E0;
+  --nav-text: #051C2C;
+  --nav-text-inactive: #888888;
+  --nav-height: 56px;
+  
+  /* Typography & Tracking */
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-label: 0.06em;
+  
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-pill: 99px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(5, 28, 44, 0.04), 0 2px 4px rgba(5, 28, 44, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.09);
+  --shadow-nav: 0 1px 3px rgba(5, 28, 44, 0.03), 0 1px 0px rgba(5, 28, 44, 0.05);
+
+  /* Animations */
+  --ease-standard: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1.0);
+  --ease-decel: cubic-bezier(0.0, 0.0, 0.2, 1.0);
+  --ease-accel: cubic-bezier(0.4, 0.0, 1.0, 1.0);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-body-text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom layout scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(5, 28, 44, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(5, 28, 44, 0.3);
+}
+
+/* Animated FadeUp Transition */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 220ms var(--ease-decel) both;
+}
+
+/* Floating effect for cards */
+.floating-card {
+  box-shadow: var(--shadow-md);
+  transition: transform 220ms var(--ease-spring), box-shadow 220ms var(--ease-standard);
+}
+.floating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Highlighted insight boxes */
+.insight-box {
+  border-left: 3px solid var(--color-accent);
+  background-color: rgba(5, 28, 44, 0.04);
+  padding: 16px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Anomaly boxes */
+.anomaly-box {
+  border-left: 3px solid var(--color-negative);
+  background-color: rgba(211, 47, 47, 0.04);
+  padding: 16px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Text formats */
+.heading-eb {
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+.display-eb {
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-display);
+}
+
+.label-uppercase {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Interactive elements */
+.interactive-input {
+  background-color: var(--color-input-bg);
+  border: 1px solid transparent;
+  transition: border-color 150ms var(--ease-standard);
+}
+.interactive-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Pills matching Professional Polish design specs */
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #E0E0E0;
+  color: #666;
+}
+.pill-active {
+  background: rgba(0, 200, 83, 0.15);
+  color: var(--color-positive);
+}
