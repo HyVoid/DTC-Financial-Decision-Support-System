@@ -11,7 +11,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%2B%20Excel-success.svg)
 ![Tool](https://img.shields.io/badge/Tool-Decision%20Support-orange.svg)
 
-**A lightweight financial operating system that transforms Shopify sales, bank transactions, accounting records, inventory purchasing, and advertising spend into a single decision framework—available free in both browser and Excel formats with no installation required.**
+**A lightweight financial operating system that transforms Shopify sales, bank transactions, accounting records, inventory purchasing, and advertising spend into a single decision framework—availabl[...]**
 
 > ## **No signup. No installation. Free.**
 >
@@ -56,7 +56,7 @@
 
 ### 1. Configure business parameters once
 
-Open the **Parameters** sheet and define operational settings such as the minimum cash reserve, reporting currency, exchange rates, forecast horizon, and other business thresholds. These values become the central control point for the entire workbook and rarely need adjustment.
+Open the **Parameters** sheet and define operational settings such as the minimum cash reserve, reporting currency, exchange rates, forecast horizon, and other business thresholds. These values become[...]
 
 ---
 
@@ -137,9 +137,9 @@ For example:
 
 **Before**
 
-A Shopify store reports \$480,000 in monthly revenue.
+A Shopify store reports $480,000 in monthly revenue.
 
-Management approves a \$150,000 inventory purchase.
+Management approves a $150,000 inventory purchase.
 
 Three weeks later, advertising invoices, supplier deposits, and delayed Shopify payouts reduce available cash below payroll requirements.
 
@@ -211,7 +211,7 @@ Each workbook starts with one practical question:
 
 # Workbook Architecture
 
-The workbook follows a strict three-layer architecture that separates raw data, analytical logic, and executive reporting. Every sheet has a single responsibility, making the workbook easier to audit, maintain, and extend.
+The workbook follows a strict three-layer architecture that separates raw data, analytical logic, and executive reporting. Every sheet has a single responsibility, making the workbook easier to audit,[...]
 
 ```
                 ┌────────────────────────────┐
@@ -342,7 +342,7 @@ As source data grows, calculations automatically expand without copying formulas
 
 ### The Decision
 
-Management approves a \$180,000 inventory order because the bank currently contains \$420,000.
+Management approves a $180,000 inventory order because the bank currently contains $420,000.
 
 ---
 
@@ -544,9 +544,9 @@ Only reconciled transactions contribute to executive reporting.
 
 | Order | Shopify | Bank | Result |
 |---------|----------|---------|---------|
-| 10541 | \$245 | \$245 | Match |
-| 10542 | \$310 | \$280 | Variance |
-| 10543 | \$180 | \$0 | Missing Settlement |
+| 10541 | $245 | $245 | Match |
+| 10542 | $310 | $280 | Variance |
+| 10543 | $180 | $0 | Missing Settlement |
 
 Finance investigates only the highlighted exceptions rather than reviewing every transaction.
 
@@ -558,8 +558,7 @@ Finance investigates only the highlighted exceptions rather than reviewing every
 =UNIQUE(
 FILTER(
 Shopify_Data[Order ID],
-Shopify_Data[Order ID]<>""
-))
+Shopify_Data[Order ID]<>""))
 ```
 
 ```excel
@@ -591,12 +590,12 @@ Current operating conditions include:
 
 | Item | Value |
 |-------|---------:|
-| Current Bank Balance | \$468,000 |
-| Outstanding Purchase Order | \$210,000 |
+| Current Bank Balance | $468,000 |
+| Outstanding Purchase Order | $210,000 |
 | Deposit Required | 30% |
 | Remaining Supplier Payment | 70% |
-| Weekly Advertising Spend | \$34,000 |
-| Safety Cash Reserve | \$100,000 |
+| Weekly Advertising Spend | $34,000 |
+| Safety Cash Reserve | $100,000 |
 | Average Shopify Settlement Delay | 4 Days |
 
 At first glance, management concludes that sufficient liquidity exists to approve the purchase order immediately.
@@ -623,10 +622,13 @@ The recommendation is therefore not simply **"buy"** or **"don't buy."**
 It becomes **"buy under payment terms that preserve minimum operating liquidity."**
 
 That distinction is exactly where operational decision support creates value.
-</details>
+
 ---
 
-### Example Scenario (Part 2)
+## Example Scenario (Part 2)
+
+<details>
+<summary>Example Scenario (Part 2) — details for technical reviewers</summary>
 
 The CFO reviews the forecast before approving the supplier payment.
 
@@ -667,6 +669,8 @@ The objective is **not** to maximize cash.
 
 The objective is to preserve decision flexibility by identifying future liquidity constraints before they become operational problems.
 
+</details>
+
 ---
 
 ## Formula Reference
@@ -688,8 +692,6 @@ Typical Parameters include:
 - Reporting Currency
 
 </details>
-
----
 
 <details>
 <summary><strong>Reconciliation Engine</strong></summary>
@@ -769,8 +771,6 @@ Automatically classifies reconciliation status.
 
 </details>
 
----
-
 <details>
 <summary><strong>Payment Review</strong></summary>
 
@@ -811,8 +811,6 @@ Payment Released
 
 </details>
 
----
-
 <details>
 <summary><strong>Cash Flow Forecast</strong></summary>
 
@@ -844,8 +842,6 @@ Purpose
 - No manual timeline maintenance
 
 </details>
-
----
 
 <details>
 <summary><strong>Inventory Impact Simulator</strong></summary>
@@ -888,6 +884,9 @@ Output
 
 ## Validation Rules
 
+<details>
+<summary>Validation Rules Table</summary>
+
 | Field | Validation Rule | Error Behavior |
 |-------|-----------------|----------------|
 | Order ID | Cannot be blank | Excluded from reconciliation |
@@ -900,6 +899,12 @@ Output
 | Advertising Cost | Numeric value | Weekly aggregation skipped |
 | Safety Cash Reserve | Positive numeric parameter | Default value applied if missing |
 | Reference ID | Consistent text format | Matching variance increases |
+
+</details>
+
+---
+
+</details>
 
 ---
 
