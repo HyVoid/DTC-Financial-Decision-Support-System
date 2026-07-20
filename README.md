@@ -1,8 +1,3 @@
-# 🌍 Language
-
-- 🇺🇸 English (Current)
-- 中文（Coming Soon）
-
 # DTC Financial Decision Support System (FDSS)
 
 ### Excel & Browser-Based Financial Control, Cash Flow Forecasting, Reconciliation, and Operational Decision Support for Shopify Brands
