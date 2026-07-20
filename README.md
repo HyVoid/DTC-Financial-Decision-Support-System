@@ -11,26 +11,17 @@
 > ## **No signup. No installation. Free.**
 >
 > 🌐 **Open in Browser**  
-> *(HTML Live Demo — Coming Soon)*
+> [*HTML Live Demo*](https://hyvoid.github.io/DTC-Financial-Control-Cash-Flow-Toolkit/)
 >
 > 📥 **Download Excel Version**  
-> *(GitHub Release / Gumroad — Coming Soon)*
+> [*Download link*](https://alexhasgreatestuff.gumroad.com/l/iybjto)
 
 ---
 
 # Screenshots
 
-### Browser Version
+<img width="1536" height="1024" alt="ChatGPT Image Jul 20, 2026, 04_33_40 PM" src="https://github.com/user-attachments/assets/f60ec3ae-7f8f-4d4f-9af0-bb72b05f83da" />
 
-<!-- screenshot: browser version -->
-
-*Interactive executive dashboard showing cash position, reconciliation exceptions, payment risks, advertising spend, and projected liquidity.*
-
----
-
-### Excel Version
-
-<!-- screenshot: excel version -->
 
 *Native Excel workbook with automated reconciliation engine, rolling cash flow forecasting, inventory simulation, and executive reporting.*
 
