@@ -1,4 +1,4 @@
-# DTC Financial Decision Support System (FDSS)
+# DTC Financial Control & Cash Flow Toolkit
 
 ### Excel & Browser-Based Financial Control, Cash Flow Forecasting, Reconciliation, and Operational Decision Support for Shopify Brands
 
